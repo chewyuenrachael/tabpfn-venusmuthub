@@ -1,0 +1,5 @@
+tabpfn
+datasets
+pandas
+scikit-learn
+matplotlib
