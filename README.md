@@ -1,12 +1,26 @@
-# 🧬 VenusMutHub + TabPFN: Mutation Effect Prediction on Protein Function
 
-This project explores the **VenusMutHub** benchmark dataset using **TabPFN**, a transformer-based foundation model for tabular data, to predict the functional effects of protein mutations. We apply `TabPFNRegressor` and `AutoTabPFNRegressor` to perform **regression** on biochemical properties like **fluorescence intensity**, **binding affinity**, and **stability** across single-point protein mutations.
+# 🧬 VenusMutHub + TabPFN: Protein Mutation Effect Prediction with Foundation Models
+
+This project investigates how transformer-based foundation models can predict the **functional impact of protein mutations** using **zero-shot tabular learning**. We apply [TabPFN](https://github.com/priorlabs/TabPFN) and its ensembling extensions to the [VenusMutHub dataset](https://huggingface.co/datasets/AI4Protein/VenusMutHub), a deep mutational scanning benchmark focused on the Venus fluorescent protein.
+
+---
+
+## 📌 Why This Matters
+
+Protein mutation effect prediction is central to protein engineering, synthetic biology, and disease variant interpretation. Traditional models require tuning and large training sets, but TabPFN:
+- Learns from millions of simulated tasks
+- Makes **zero-shot predictions** in one pass
+- Excels on **small, noisy biological datasets**
 
 ---
 
 ## 📚 Dataset: VenusMutHub (Hugging Face Datasets)
 
 The [VenusMutHub dataset](https://huggingface.co/datasets/AI4Protein/VenusMutHub) provides deep mutational scanning data for the Venus fluorescent protein. Each entry represents a mutation, its altered sequence, and a fitness score corresponding to a biochemical property.
+
+Each row includes:
+- Protein mutation descriptors (e.g. position, amino acid change)
+- A numerical `fitness_score` target
 
 ### How to Access the Dataset
 
